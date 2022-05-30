@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "esnext", // 目标语言的版本
+    "useDefineForClassFields": true, // https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-7.html#the-usedefineforclassfields-flag-and-the-declare-property-modifier
+    "module": "esnext", // 指定生成代码的模块标准
+    "moduleResolution": "node", // 决定如何处理模块
+    "strict": true, // 启用所有严格类型检查选项
+    "jsx": "preserve",  // 在.tsx文件里支持JSX https://www.tslang.cn/docs/handbook/jsx.html
+    "sourceMap": true,  // 生成目标文件的sourceMap文件
+    "resolveJsonModule": true, // 为了import json文件方便
+    "isolatedModules": true, 
+    "esModuleInterop": true, // 为了import cjs文件方便 https://zhuanlan.zhihu.com/p/148081795
+    "lib": ["esnext", "dom"], // 编译过程中需要引入的库文件的列表
+    "skipLibCheck": true
+  },
+  // 指定类型编译器需要编译的文件或文件夹
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}
