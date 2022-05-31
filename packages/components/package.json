@@ -1,12 +1,9 @@
 {
   "name": "@baojun-ui/components",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "all components are settled here",
   "main": "index.ts",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "peerDependencies": {
+    "vue": "^3.2.25"
+  }
 }

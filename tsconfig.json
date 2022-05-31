@@ -10,10 +10,15 @@
     "resolveJsonModule": true, // 为了import json文件方便
     "isolatedModules": true, 
     "esModuleInterop": true, // 为了import cjs文件方便 https://zhuanlan.zhihu.com/p/148081795
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["*"], // 解决找不到模块“~/package.json”。请考虑使用 "--resolveJsonModule" 导入带 ".json" 扩展的模块。
+      "@/*": ["src/*"]
+    },
     "lib": ["esnext", "dom"], // 编译过程中需要引入的库文件的列表
     "skipLibCheck": true
   },
   // 指定类型编译器需要编译的文件或文件夹
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "types/**/*.d.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

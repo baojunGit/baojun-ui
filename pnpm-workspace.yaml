@@ -1,5 +1,15 @@
+# pnpm 提出了 workspace 的概念，内置了对 monorepo 的支持（单项目多仓库），用 pnpm 取代之前的lerna，优势：
+# 1.lerna 已经不再维护，后续有任何问题社区无法及时响应
+# 2.pnpm装包效率更高，并且可以节约更多磁盘空间
+# 3.pnpm本身就预置了对monorepo的支持，不需要再额外第三方包的支持
+
 packages:
+  # 所有在 packages 子目录下的 package
   - packages/*
+
   # - docs
-  # - play
+  - play
   # - internal/*
+
+  # 不包括在 test 文件夹下的 package
+  # - '!**/test/**'
